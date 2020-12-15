@@ -38,7 +38,7 @@ mindMap(data, options)
   
   - `{Array[Object]} children`: 子节点
   
-- `{Object} options`（可选）: 绘制配置（以下配置都是可选）
+- `{Object} options`（可选）: 绘制配置（以下配置都是可选的）
   
   - `{String||null} direction`: 绘制模式，可选值为 `right`，指定 `right`时表示所有的元素将绘制在中心点的右侧，默认绘制在中心点两侧
   
@@ -46,7 +46,7 @@ mindMap(data, options)
 
   - `{Function} callback`: 点击每一项子元素时触发的回调函数，参数将返回当前对象信息
   
-  - `{String} className`: 给 svg 贬值的一个类名
+  - `{String} className`: 给 svg 赋加的类名
   
   - `{Object} rectStyle`： 绘制 `{svg}rect` 的样式配置（包含 `children` 属性对象都用 `rect` 绘制）
     
@@ -83,16 +83,16 @@ mindMap(data, options)
    
   - `rootStyle`： 绘制`{svg}rect` 中心点的样式配置
     
-  ```js
-  // 粟子：
-   {
-     'font-size': '18px', // 文字大小
-     'border-radius': '5', // 圆角大小
-     color: '#fff', // 文字颜色
-     fill: 'transparent', // 背景颜色
-     padding: 0, // 文字与边框的间距，同 CSS padding，支持格式 `padding: x` 和 `padding: x x`, 不支持 `padding: x x x x`
-   }
-  ```
+   ```js
+   // 粟子：
+    {
+      'font-size': '18px', // 文字大小
+      'border-radius': '5', // 圆角大小
+      color: '#fff', // 文字颜色
+      fill: 'transparent', // 背景颜色
+      padding: 0, // 文字与边框的间距，同 CSS padding，支持格式 `padding: x` 和 `padding: x x`, 不支持 `padding: x x x x`
+    }
+   ```
 
   - `globalStyle`： 绘制元素布局相关的样式配置
     
