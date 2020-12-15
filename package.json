@@ -1,0 +1,20 @@
+{
+  "name": "mind-map-js",
+  "version": "1.0.0",
+  "description": "create mindmap by object",
+  "main": "./src/mind-map-js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mindmap",
+    "svg",
+    "js"
+  ],
+  "author": "lanjz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lanjz/mind-map-js.git"
+  }
+}
