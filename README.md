@@ -6,13 +6,15 @@
 
 **import**
 
-```
-yarn add mind-map-js or npm install mind-map-js
+```js
+yarn add mind-map-js
+//or
+npm install mind-map-js
 ```
 
 项目中引入使用
 
-```
+```js
 import mindMap from 'mind-map-js'
 mindMap(data, options)
 ```
@@ -21,7 +23,7 @@ mindMap(data, options)
 
 下载 `mind-map-js` 并放到项目中 
 
-```
+```js
 <script src="mind-map-js.js"></script>
 <script>
   mindMap(data, options)
