@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #272b2d;
+            height: 100vh;
+            min-height: 500px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        #btn{
+            padding: 8px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            background: #42b983;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #svg{
+            flex-grow: 1;
+            width: 100%;
+            overflow: auto;
+        }
+        .actions{
+            padding-top: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="actions">
+    <div id="btn">更新SVG</div>
+    模式方向：<input type="checkbox" id="checkbox"/>right
+</div>
+
+<div id="svg"></div>
+</body>
+<script src="./src/svgMap2.js"></script>
+<script>
+  let count = 0
+  function createArr(pre, level = 0){
+    count++
+    if(count > 1 && (Math.random() < 0.5 || count > 20 || level > 3)) return null
+    let arr = []
+    let forCount = Math.ceil(Math.random()*4)
+    for(let i = 1; i <= forCount; i++){
+      let obj = {
+        label: pre ? pre + '-' + i : 'label '+i
+      }
+      obj.children = createArr(obj.label, ++level)
+      if(!obj.children || !obj.children.length){
+        obj.type = 'text'
+      }
+      arr.push(obj)
+    }
+    return arr
+  }
+  function createObj() {
+    count = 0
+    let obj = {
+      label: 'Mind-Map-Js',
+    }
+    obj.children = createArr()
+    return obj
+  }
+  window.onload = function (){
+    const rootStyle = {
+      fill: '#272b2d',
+    }
+    const rectStyle = {
+      'border-radius': '4',
+      padding: '2 8',
+      color: '#fff',
+      fill: '#a3c6c0',
+    }
+    const textStyle = {
+      color: '#fff',
+    }
+    let options = {
+      title: 'Orchid',
+      className: 'abc',
+      rectStyle,
+      textStyle,
+      rootStyle,
+      callback(data) {
+        console.log('data', data)
+      }
+    }
+    function updateSvg(){
+      let data = createObj()
+      document.getElementById('svg').innerHTML = ''
+      document.getElementById('svg').appendChild(mindMap(data, options))
+    }
+    updateSvg()
+    document.getElementById('btn').onclick = function () {
+      updateSvg()
+    }
+    document.getElementById('checkbox').onchange = function (e){
+      console.log('e',  document.getElementById('checkbox').checked)
+      options.direction = document.getElementById('checkbox').checked ? 'right': null
+      updateSvg()
+    }
+  }
+</script>
+</html>
