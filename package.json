@@ -2,7 +2,7 @@
   "name": "svg-mind-js",
   "version": "1.0.0",
   "description": "create mindmap by object",
-  "main": "./src/mind-map-js.js",
+  "main": "./src/svg-mind-js.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
