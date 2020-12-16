@@ -1,4 +1,4 @@
-# min-map-js
+# svg-mind-js
 
 将对象转为 SVG 脑图
 
@@ -7,24 +7,24 @@
 **import**
 
 ```js
-yarn add mind-map-js
+yarn add svg-mind-js
 //or
-npm install mind-map-js
+npm install svg-mind-js
 ```
 
 项目中引入使用
 
 ```js
-import mindMap from 'mind-map-js'
+import mindMap from 'svg-mind-js'
 mindMap(data, options)
 ```
 
 **script 标签引入**
 
-下载 `mind-map-js` 并放到项目中 
+下载 `svg-mind-js` 并放到项目中 
 
 ```js
-<script src="mind-map-js.js"></script>
+<script src="svg-mind-js.js"></script>
 <script>
   mindMap(data, options)
 </script>

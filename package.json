@@ -1,5 +1,5 @@
 {
-  "name": "mind-map-js",
+  "name": "svg-mind-js",
   "version": "1.0.0",
   "description": "create mindmap by object",
   "main": "./src/mind-map-js.js",
@@ -15,6 +15,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:lanjz/mind-map-js.git"
+    "url": "git@github.com:lanjz/svg-mind-js.git"
   }
 }
