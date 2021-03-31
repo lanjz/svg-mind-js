@@ -2,6 +2,8 @@
 
 将对象转为 SVG 脑图
 
+![](https://github.com/lanjz/svg-mind-js/blob/master/demo.png?raw=true)
+
 ## 使用
 
 **import**
