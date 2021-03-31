@@ -4,6 +4,8 @@
 
 ![](https://github.com/lanjz/svg-mind-js/blob/master/demo.png?raw=true)
 
+粟子：[DEMO](https://codebeat.gitee.io/lanjz/)
+
 ## 使用
 
 **import**
